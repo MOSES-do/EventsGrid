@@ -20,7 +20,7 @@
     "build": "npm-run-all copy:html build:*",
     "compile:sass": "sass src/sass/index.scss public/css/index.css",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "build:css": "npm-run-all compile:sass postbuild"
+    // "build:css": "npm-run-all compile:sass postbuild"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
