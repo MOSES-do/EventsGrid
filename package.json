@@ -18,8 +18,8 @@
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:html build:*",
-    // "compile:sass": "sass src/sass/index.scss public/css/index.css",
     "postbuild:css": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "postbuild:js": "uglifyjs-folder src/js -eo public/scripts",
     "postbuild": "npm-run-all postbuild:css"
   },
   "dependencies": {
@@ -30,6 +30,8 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
-    "sass": "^1.49.8"
+    "sass": "^1.49.8",
+    "uglifyjs-folder": "^3.1.3"
+
   }
 }
