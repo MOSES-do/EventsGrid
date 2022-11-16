@@ -1,0 +1,7 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+.sec-sub-title {
+    font-size: type.font-size-st(m);
+    font-weight: type.font-weight(bold);
+}

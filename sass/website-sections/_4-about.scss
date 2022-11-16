@@ -1,0 +1,69 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    figure {
+        align-self: stretch;
+    }
+
+    background-image: url("../../images/about/about-bg.png");
+    background-color: clrs.color-type(c2);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: flex-start;
+
+        // 
+        &--mini-title {
+            font-size: type.font-size-st(sc);
+            color: clrs.color-type(c1);
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        // 
+        &--title {
+            font-size: type.font-size-st(l);
+            text-align: left;
+            color: clrs.color-type(c1);
+            text-transform: capitalize;
+        }
+
+        // 
+        &--para {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            text-align: left;
+            color: clrs.color-type(c1);
+        }
+
+        // 
+        &--date {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            color: clrs.color-type(c1);
+
+            span:first-of-type {
+                background-color: clrs.color-theme(c2);
+                padding: pad.padding-st-v(s);
+                border-radius: 50%;
+            }
+        }
+
+    }
+}

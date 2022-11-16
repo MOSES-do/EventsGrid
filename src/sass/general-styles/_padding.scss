@@ -1,0 +1,76 @@
+// Orientation
+//      = vertical (top & bottom)
+//       = horizontal(left & right)
+
+
+
+// Sizing
+//       l = large
+//      m = medium
+//      s = small
+//      xs = extra small
+//      c = customized
+
+// Sizing Nature
+//      d = dynamic
+//      st = static
+
+// Padding
+//      pad = padding       
+
+
+// Dynamic values
+//top and bottom
+$pad-d-v: (
+    "l": calc(2rem + 12vh),
+    "mc": calc(1rem + 8vh),
+    "m": calc(1rem + 6vh),
+    "sc": calc(1rem + 4vh),
+    "s": calc(1rem + 1vh),
+);
+
+@function padding-d-v($padd-dv) {
+    @return map-get($pad-d-v, $padd-dv);
+}
+
+
+//left and right
+$pad-d-h: (
+    "l": calc(2rem + 12vw),
+    "mc": calc(1rem + 8vw),
+    "m": calc(1rem + 6vw),
+    "sc": calc(1rem + 4vw),
+    "s": calc(1rem + 1vw),
+    "xs": calc(1rem + 1vw),
+);
+
+@function padding-d-h($padd-dh) {
+    @return map-get($pad-d-h, $padd-dh);
+}
+
+
+//Static values
+
+$pad-st-v: (
+    "xl": 4rem,
+    "lc":3rem,
+    "l": 2rem,
+    "m":1.5rem,
+    "s": 1rem,
+);
+
+@function padding-st-v($padd-stv) {
+    @return map-get($pad-st-v, $padd-stv);
+}
+
+$pad-st-h: (
+    "xl": 8rem,
+    "l": 3rem,
+    "m":2.5rem,
+    "s": 2rem,
+    "xs":1.5rem,
+);
+
+@function padding-st-h($padd-sth) {
+    @return map-get($pad-st-h, $padd-sth);
+}

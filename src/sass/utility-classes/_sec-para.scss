@@ -1,0 +1,14 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+//According to Haleel paragraphs don't compromise responsiveness so they get a static fontsize in this scenario.
+.sec-para {
+    font-size: type.font-size-st(sc);
+    color: clrs.color-type(c2);
+    text-align: center;
+    margin-bottom: 4rem;
+
+    span {
+        display: block;
+    }
+}

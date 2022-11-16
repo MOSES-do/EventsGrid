@@ -1,0 +1,66 @@
+@media only screen and (max-width:868px) {
+
+    //--------------- COUNTDOWN
+    .countdown__content {
+        padding: 6rem 0;
+    }
+}
+
+// events
+.events {
+
+    @media only screen and (max-width:853px) {
+        &__timing {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 1rem;
+            position: relative;
+            padding-bottom: 8rem;
+        }
+
+        &__location {
+            @media only screen and (max-width:447px) {
+                flex-direction: column;
+            }
+
+            @media only screen and (max-width:347px) {
+                div:last-of-type {
+                    div>span {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+
+                .events__location--user_avatar {
+                    flex-direction: column;
+                    margin-top: 1rem;
+                }
+            }
+
+            div:nth-child(2) {
+                p {
+                    @media only screen and (max-width:305px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+
+
+        .btn {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+    }
+
+
+    &__days {
+        @media only screen and (max-width:755px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            // padding: pad.padding-d-v(sc) pad.padding-d-h(sc);
+        }
+    }
+}

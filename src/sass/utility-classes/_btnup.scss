@@ -1,0 +1,9 @@
+ .btnup:hover {
+     transform: translateY(-2px);
+     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+     //  transition: all 400ms ease-out;
+
+     &:active {
+         transform: translateY(0);
+     }
+ }

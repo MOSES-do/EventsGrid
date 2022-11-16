@@ -1,0 +1,132 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+
+.blog {
+    background-color: clrs.color-theme(c1);
+    padding-top: 12rem;
+
+    &__mini-title {
+        color: clrs.color-type(c3);
+
+        &::before,
+        &::after {
+            background-color: clrs.color-theme(c2);
+        }
+
+        &::before {
+            left: -2.5rem;
+        }
+
+        &::after {
+            right: -2.5rem;
+        }
+    }
+
+    &__title {
+        color: clrs.color-type(c2)
+    }
+
+    &__description {
+        color: clrs.color-type(c2);
+    }
+
+    &__card--box {
+        width: 100%;
+
+
+
+        &-post {
+            padding: 2rem;
+            // place-self: center;
+            background-color: clrs.color-theme(c4);
+            border-radius: 0.5rem;
+
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            transition: all 0.20s linear;
+
+            position: relative;
+
+            figure {
+                img {
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .date-month {
+                position: absolute;
+                top: 3rem;
+                left: 3rem;
+                background-color: clrs.color-theme(c2);
+                padding: 1rem;
+                border-radius: 0.5rem;
+
+                span {
+                    display: block;
+                    text-align: center;
+                    font-size: type.font-size-st(sc);
+                    font-weight: type.font-weight(bold);
+                    color: clrs.color-type(c1);
+                }
+            }
+
+            div:first-of-type {
+                display: flex;
+                justify-content: flex-start;
+
+                .event-title {
+                    color: clrs.color-theme(c3);
+                    place-self: start;
+                    font-weight: type.font-weight(medium);
+                    margin-top: 1rem;
+
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            .event-para {
+                font-weight: type.font-weight(medium);
+                color: rgba(clrs.color-type(c2), 0.9);
+                margin-top: 2rem;
+            }
+
+            .event-para-long {
+                font-weight: type.font-weight(regular);
+                margin-top: 2rem;
+                hyphens: auto;
+                line-height: 1.65;
+            }
+
+
+            .btn__blog-more {
+                display: flex;
+                margin-top: 2rem;
+                align-self: left;
+
+                .blog__nav--more {
+                    background-color: clrs.color-theme(c3);
+
+                    &:hover {
+                        background-color: clrs.color-theme(c2);
+                    }
+                }
+            }
+
+
+
+            @media (hover) {
+                box-shadow: none;
+
+                &:hover {
+                    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+                    transform: translateY(-.1rem);
+                }
+            }
+        }
+    }
+}

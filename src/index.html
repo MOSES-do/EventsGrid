@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT-AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <script defer src="js/app.js"></script>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>EventGrid - Book Your Next Event</title>
+
+</head>
+
+<body>
+    <main class="container">
+        <header class="header overall-layout padd sec-flex">
+            <nav class="header__nav">
+                <figure><a href="#"><img src="../assets/images/header/logo.svg" class="header__nav--logo"></img></a>
+                </figure>
+
+
+                <div class="header__nav--hamburger">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                </div>
+
+                <ul class="header__nav--links sec-flex-row">
+                    <a href="#" class="header__nav--links__link">Home</a>
+
+                    <a href="gallery.html" target="_blank" class="header__nav--links__link">Gallery</a>
+
+                    <a href="pricing.html" target="_blank" class="header__nav--links__link">Pricing</a>
+
+                    <a href="schedule.html" target="_blank" class="header__nav--links__link">Schedule</a>
+
+                    <a href="speakers.html" target="_blank" class="header__nav--links__link">Speakers</a>
+
+                    <a href="blog.html" target="_blank" class="header__nav--links__link">Blog</a>
+
+                    <a href="contact.html" target="_blank" class="header__nav--links__link">Contact</a>
+                </ul>
+
+                <a href="pricing.html" class="header__nav--cta sec-link btnup transit" target="_blank">Get Tickets <i
+                        class="fa-solid fa-ticket"></i></a>
+            </nav>
+
+            <section class="header__hero">
+                <p class="header__hero--location"> <i class="fa-solid fa-location-dot"></i> WaterFront Hotel, London</p>
+
+                <h1 class="header__hero--title">
+                    The Largest Conference In <span>Europe</span>
+                </h1>
+
+                <p class="header__hero--para sec-para">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, sed!
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                </p>
+
+                <a href="pricing.html" class="header__hero--tickets-link sec-link btnup transit" target="_blank">Buy
+                    ticket
+                    now</a>
+            </section>
+        </header>
+
+        <section class="countdown overall-layout padd">
+            <div class="countdown_content">
+                <div class="countdown__content">
+                    <div class="countdown__content--day">
+                        <div>
+                            <p class="separator">364</p>
+                            <p>Days</p>
+                        </div>
+                    </div>
+
+                    <div class="countdown__content--hour">
+                        <div>
+                            <p class="separator--1">23</p>
+                            <p>Hours</p>
+                        </div>
+                    </div>
+
+                    <div class="countdown__content--minute">
+                        <div>
+                            <p class="separator--2">23</p>
+                            <p>Minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="countdown__content--second">
+                        <div>
+                            <p>35</p>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="features overall-layout padd sec-flex">
+            <h6 class="features__mini-title sec-mini-title">
+                Why Join EventGrids?
+            </h6>
+            <h2 class="features__title sec-title">Why you should join an Event</h2>
+            <p class="features__para sec-para">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi
+                perferendis culpa quasi illum
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+            </p>
+
+            <div class="features__container responsive-grid">
+                <div class="features__container--feature">
+                    <i class="fa-solid fa-microphone features__container--feature__icon"></i>
+                    <h3 class="features__container--feature__number">01</h3>
+                    <h4 class="features__container--feature__title">Great Speakers</h4>
+                    <p class="features__container--feature__desc sec-sub-para">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Consequuntur aut animi amet.
+                    </p>
+                </div>
+
+                <div class="features__container--feature">
+                    <i class="fa-solid fa-user-group features__container--feature__icon"></i>
+
+                    <h3 class="features__container--feature__number">02</h3>
+
+                    <h4 class="features__container--feature__title">New People</h4>
+
+                    <p class="features__container--feature__desc sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
+                        ipsum at facilis quaerat sunt!
+                    </p>
+                </div>
+
+                <div class="features__container--feature">
+                    <i class="fa-solid fa-calendar-check features__container--feature__icon"></i>
+
+                    <h3 class="features__container--feature__number">03</h3>
+
+                    <h4 class="features__container--feature__title">Global Event</h4>
+
+                    <p class="features__container--feature__desc sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
+                        ipsum at facilis quaerat sunt!
+                    </p>
+                </div>
+
+                <div class="features__container--feature">
+                    <i class="fa-solid fa-lightbulb features__container--feature__icon"></i>
+
+                    <h3 class="features__container--feature__number">04</h3>
+
+                    <h4 class="features__container--feature__title">Get Inspired</h4>
+
+                    <p class="features__container--feature__desc sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
+                        ipsum at facilis quaerat sunt!
+                    </p>
+                </div>
+
+                <div class="features__container--feature">
+                    <i class="fa-solid fa-people-group features__container--feature__icon"></i>
+
+                    <h3 class="features__container--feature__number">05</h3>
+
+                    <h4 class="features__container--feature__title">
+                        Networking Session
+                    </h4>
+
+                    <p class="features__container--feature__desc sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
+                        ipsum at facilis quaerat sunt!
+                    </p>
+                </div>
+
+                <div class="features__container--feature">
+                    <i class="fa-solid fa-face-smile features__container--feature__icon"></i>
+
+                    <h3 class="features__container--feature__number">06</h3>
+
+                    <h4 class="features__container--feature__title">Meet New Faces</h4>
+
+                    <p class="features__container--feature__desc sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
+                        ipsum at facilis quaerat sunt!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about overall-layout padd">
+            <figure class="about__img">
+                <img loading="lazy" src="../assets/images/about/about-image.jpg" alt="Event" />
+            </figure>
+
+            <div class="about__content">
+                <h6 class="about__content--mini-title sec-mini-title">
+                    Get Experience
+                </h6>
+                <h2 class="about__content--title sec-title">about the event</h2>
+                <p class="about__content--para sec-para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+                    dolor sit amet, consectetur adipisicing elit. Delectus, modi!
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor
+                        sit amet, consectetur adipisicing elit. Delectus,</span>
+                </p>
+
+                <p class="about__content--date sec-para">
+                    <span>25th</span> <span>Dec 2023</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="speakers overall-layout sec-flex padd">
+            <h6 class="speakers__mini-title sec-mini-title">Speakers</h6>
+            <h2 class="speakers__title sec-title">Today's Performers</h2>
+            <p class="speakers__desc sec-para">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+                ratione obcaecati aut hic in aspernatur?
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            </p>
+
+            <div class="speakers__container responsive-grid">
+                <div class="speakers__container--speaker">
+                    <figure class="speakers__container--speaker__img">
+                        <img loading="lazy" src="../assets/images/speakers/speaker-1.jpg" alt="Event Performer" />
+                    </figure>
+
+                    <h3 class="speakers__container--speaker__name sec-sub-title">
+                        Fredric Martinsson
+                    </h3>
+                    <p class="speakers__container--speaker__role sec-sub-para">
+                        Founder, Edilta
+                    </p>
+
+                    <div class="speakers__container--speaker__social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="speakers__container--speaker">
+                    <figure class="speakers__container--speaker__img">
+                        <img loading="lazy" src="../assets/images/speakers/speaker-2.jpg" alt="Event Performer" />
+                    </figure>
+
+                    <h3 class="speakers__container--speaker__name sec-sub-title">
+                        Melisa Lundryn
+                    </h3>
+                    <p class="speakers__container--speaker__role sec-sub-para">
+                        Lead Designer
+                    </p>
+
+                    <div class="speakers__container--speaker__social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="speakers__container--speaker">
+                    <figure class="speakers__container--speaker__img">
+                        <img loading="lazy" src="../assets/images/speakers/speaker-3.jpg" alt="Event Performer" />
+                    </figure>
+
+                    <h3 class="speakers__container--speaker__name sec-sub-title">
+                        Andrio Limuya
+                    </h3>
+                    <p class="speakers__container--speaker__role sec-sub-para">
+                        Web Developer
+                    </p>
+
+                    <div class="speakers__container--speaker__social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="events overall-layout padd sec-flex">
+            <h6 class="events__mini-title sec-mini-title">Events</h6>
+            <h2 class="events__title sec-title">Events Schedule</h2>
+            <p class="events__description sec-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                sint voluptates ratione.
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing.</span>
+            </p>
+
+
+            <div class="events__days">
+                <div class="events__days--day current">
+                    <p class="sec-sub-title">Day 1</p>
+                    <p class="sec-sub-para">May 10, 2025</p>
+                </div>
+
+                <div class="events__days--day">
+                    <p class="sec-sub-title">Day 2</p>
+                    <p class="sec-sub-para">May 14, 2025</p>
+                </div>
+
+                <div class="events__days--day">
+                    <p class="sec-sub-title">Day 3</p>
+                    <p class="sec-sub-para">May 16, 2025</p>
+                </div>
+
+                <div class="events__days--day">
+                    <p class="sec-sub-title">Day 4</p>
+                    <p class="sec-sub-para">May 18, 2025</p>
+                </div>
+            </div>
+
+
+            <div class="events__timing">
+                <div class="events__timing--calendar">
+                    <p class="events__timing--calendar-date">10</p>
+
+                    <div class="events__timing--calendar-month">
+                        <p class="events__timing--calendar-month__date sec-sub-title">
+                            May
+                        </p>
+                        <p class="events__timing--calendar--month__time sec-sub-para">
+                            08.00 AM - 08:45 AM<span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="events__location">
+                    <div class="avatar">
+                        <img src="../assets/images/events/event-1.jpg" alt="Event Image">
+                    </div>
+
+                    <div>
+                        <p>A Very Cool Event Unravels</p>
+                        <div class="events__location--user_avatar">
+                            <span class="block">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="sec-sub-para">By: Andio Lexa</span>
+                            </span>
+
+                            <span class="block">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span class="sec-sub-para">At: Prism Club, USA</span>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <a href="#" class="events__location--cta sec-link btnup transit" target="_blank">Read More</a>
+                </div>
+
+
+            </div>
+
+            <a href="#" class="events--cta sec-link btnup transit">Load More Events
+            </a>
+        </section>
+
+        <section class="pricing overall-layout padd sec-flex">
+            <h6 class="pricing__mini-title sec-mini-title">Pricing</h6>
+            <h2 class="pricing__title sec-title">Pricing & Plans</h2>
+            <p class="pricing__description sec-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                sint voluptates ratione.
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing.</span>
+            </p>
+
+            <div class="pricing__box responsive-grid">
+                <div class="pricing__box--card card--1">
+
+                    <h6 class="pricing__box--card-title sec-mini-title">Regular</h6>
+
+                    <p class="pricing__box--card-para sec-sub-para ">Available tickets for this price</p>
+
+                    <p class="pricing__box--card-cost">
+                        $10
+                    </p>
+
+                    <div class="pricing__box--card-sticker">
+                        <p>Get Ticket</p>
+                    </div>
+
+                    <div class="pricing__box--card-paras">
+                        <p class="sec-sub-para"> One Day Conference Ticket</p>
+                        <p class="sec-sub-para"> Posters Session</p>
+                        <p class="sec-sub-para"> Coffee Break & Networking</p>
+                        <p class="sec-sub-para"> Lunch & Networking</p>
+                        <p class="sec-sub-para"> Keynote Speech</p>
+                    </div>
+
+                </div>
+
+                <div class="pricing__box--card card--2">
+
+                    <h6 class="pricing__box--card-title sec-mini-title">Exclusive</h6>
+
+                    <p class="pricing__box--card-para sec-sub-para ">Available tickets for this price</p>
+
+                    <p class="pricing__box--card-cost">
+                        $99
+                    </p>
+
+                    <div class="pricing__box--card-sticker">
+                        <p>Get Ticket</p>
+                    </div>
+
+                    <div class="pricing__box--card-paras">
+                        <p class="sec-sub-para"> One Day Conference Ticket</p>
+                        <p class="sec-sub-para"> Posters Session</p>
+                        <p class="sec-sub-para"> Coffee Break & Networking</p>
+                        <p class="sec-sub-para"> Lunch & Networking</p>
+                        <p class="sec-sub-para"> Keynote Speech</p>
+                    </div>
+
+                </div>
+
+                <div class="pricing__box--card card--3">
+
+                    <h6 class="pricing__box--card-title sec-mini-title">Premium</h6>
+
+                    <p class="pricing__box--card-para sec-sub-para ">Available tickets for this price</p>
+
+                    <p class="pricing__box--card-cost">
+                        $300
+                    </p>
+
+                    <div class="pricing__box--card-sticker">
+                        <p>Get Ticket</p>
+                    </div>
+
+                    <div class="pricing__box--card-paras">
+                        <p class="sec-sub-para"> One Day Conference Ticket</p>
+                        <p class="sec-sub-para"> Posters Session</p>
+                        <p class="sec-sub-para"> Coffee Break & Networking</p>
+                        <p class="sec-sub-para"> Lunch & Networking</p>
+                        <p class="sec-sub-para"> Keynote Speech</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="testimonials overall-layout padd sec-flex">
+            <h6 class="testimonials__mini-title sec-mini-title">Testimonials</h6>
+            <h2 class="testimonials__title sec-title">What People Say About Us</h2>
+            <p class="testimonials__description sec-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum
+                sint voluptates ratione.
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing.</span>
+            </p>
+
+            <div class="testimonials__box responsive-grid">
+
+                <div class="testimonials__box--card testimonial-card--1">
+                    <div class="avatar">
+                        <img loading="lazy" src="../assets/images/testimonials/man.jpg" alt="Testifier Image">
+                    </div>
+
+                    <p class="testimonials__box--card-para sec-para">Will Higgens</p>
+                    <p class="testimonials__box--card-sub-sec sub-sec">Developer Advocate</p>
+
+                    <div class="testimonials__box--card-ratings">
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                    </div>
+
+
+                    <p class="testimonial__writeup sec-para">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Nostrum
+                        sint voluptates ratione.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </p>
+
+                </div>
+
+                <div class="testimonials__box--card testimonial-card--2">
+                    <div class="avatar">
+                        <img loading="lazy" src="../assets/images/testimonials/woman-1.jpg" alt="Testifier Image">
+                    </div>
+
+                    <p class="testimonials__box--card-para sec-para">Will Higgens</p>
+                    <p class="testimonials__box--card-sub-sec sub-sec-para">Developer Advocate</p>
+
+                    <div class="testimonials__box--card-ratings">
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                    </div>
+
+
+                    <p class="testimonial__writeup sec-para">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Nostrum
+                        sint voluptates ratione.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </p>
+
+                </div>
+
+                <div class="testimonials__box--card testimonial-card--3">
+                    <div class="avatar">
+                        <img loading="lazy" src="../assets/images/testimonials/woman-2.jpg" alt="Testifier Image">
+                    </div>
+
+                    <p class="testimonials__box--card-para sec-para">Will Higgens</p>
+                    <p class="testimonials__box--card-sub-sec sub-sec-para">Developer Advocate</p>
+
+                    <div class="testimonials__box--card-ratings">
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                    </div>
+
+
+                    <p class="testimonial__writeup sec-para">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Nostrum
+                        sint voluptates ratione.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="blog overall-layout padd sec-flex">
+            <h6 class="blog__mini-title sec-mini-title">Blogs</h6>
+            <h2 class="blog__title sec-title">Our Latest News</h2>
+            <p class="blog__description sec-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum
+                sint voluptates ratione.
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing.</span>
+            </p>
+
+            <div class="blog__card--box responsive-grid">
+                <div class="blog__card--box-post post--1">
+
+                    <figure>
+                        <img loading="lazy" src="../assets/images/blog-page/blog-3.jpeg" alt="">
+                    </figure>
+
+                    <div>
+                        <p class="event-title sec-mini-title">Events</p>
+                    </div>
+
+                    <div class="date-month">
+                        <span>30</span>
+                        <span>Mar</span>
+                    </div>
+
+                    <p class="event-para sec-sub-title"> 3 Best Practices for Keeping Your Event Clients Happy</p>
+
+                    <p class="event-para-long sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum
+                        sint voluptates ratione.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </p>
+
+                    <div class="btn__blog-more">
+                        <a href="#" class="blog__nav--more sec-link btnup transit">Read Blog</a>
+                    </div>
+                </div>
+
+                <div class="blog__card--box-post post--2">
+
+                    <figure>
+                        <img loading="lazy" src="../assets/images/blog-page/blog-4.jpg" alt="">
+                    </figure>
+
+                    <div>
+                        <p class="event-title sec-mini-title">Conference</p>
+                    </div>
+
+                    <div class="date-month">
+                        <span>30</span>
+                        <span>Mar</span>
+                    </div>
+
+                    <p class="event-para sec-sub-title"> Adding a New Digital Dimension to Your Next Special Event</p>
+
+                    <p class="event-para-long sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum
+                        sint voluptates ratione.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </p>
+
+                    <div class="btn__blog-more">
+                        <a href="#" class="blog__nav--more sec-link btnup transit">Read Blog</a>
+                    </div>
+                </div>
+
+                <div class="blog__card--box-post post--3">
+
+                    <figure>
+                        <img loading="lazy" src="../assets/images/blog-page/blog-5.jpg" alt="">
+                    </figure>
+
+                    <div>
+                        <p class="event-title sec-mini-title">Marketing</p>
+                    </div>
+
+                    <div class="date-month">
+                        <span>30</span>
+                        <span>Mar</span>
+                    </div>
+
+                    <p class="event-para sec-sub-title"> Proven Marketing Strategies to Boost Digital Product Sales</p>
+
+                    <p class="event-para-long sec-sub-para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum
+                        sint voluptates ratione.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing.
+                    </p>
+
+                    <div class="btn__blog-more">
+                        <a href="#" class="blog__nav--more sec-link btnup transit">Read Blog</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="events__cta overall-layout padd sec-flex">
+            <h6 class="events__cta-title sec-mini-title">Hurry Up!</h6>
+
+            <h2 class="events__cta-sec-title__title sec-title">Europe's Leading Conference Book your Seat Now</h2>
+            <p class="events__cta-sec-title__description sec-para">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Nostrum
+                sint voluptates ratione.
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing.</span>
+            </p>
+
+            <a href="pricing.html" class="header__nav--cta sec-link btnup transit" target="_blank">Get Tickets <i
+                    class="fa-solid fa-ticket"></i></a>
+        </section>
+
+
+        <footer class="overall-layout">
+
+            <div class="sect-1">
+                <figure><a href="#"><img src="../assets/images/footer/dark-logo.svg" class="footer__logo"></img></a>
+                </figure>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Nostrum
+                    sint voluptates ratione.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing.
+                </p>
+
+                <p>Follow Us On</p>
+
+                <div class="sect-1__footer__socials">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+
+            <div class="sect-2">
+                <p class="sect-2__sub-title sec-sub-title">Quick Links</p>
+
+                <div class="sect-2__group-links">
+                    <a href="#" class="links">Get Directions</a>
+                    <a href="#" class="links">Sponsor</a>
+                    <a href="#" class="links">What We Offer</a>
+                    <a href="#" class="links">Recent Projects</a>
+                    <a href="#" class="links">Insights</a>
+                </div>
+            </div>
+
+            <div class="sect-3">
+                <p class="sect-3__sub-title sec-sub-title">Explore More</p>
+
+                <div class="sect-3__group-links">
+                    <a href="#" class="links">About Us</a>
+                    <a href="#" class="links">Pricing</a>
+                    <a href="#" class="links">FAQs</a>
+                    <a href="#" class="links">Guides</a>
+                    <a href="#" class="links">Contact Us</a>
+                </div>
+
+            </div>
+
+            <div class="sect-4">
+                <p class="sect-4__sub-title sec-sub-title">Subscribe to our newsletter</p>
+
+                <input type="text" class="name" placeholder="Name">
+
+                <input type="email" class="name" placeholder="Email Address">
+
+                <a class="footer-btn">Subscribe</a>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

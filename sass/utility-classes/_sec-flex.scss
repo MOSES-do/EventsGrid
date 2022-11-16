@@ -1,0 +1,12 @@
+.sec-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sec-flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

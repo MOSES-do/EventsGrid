@@ -1,0 +1,31 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+.sec-mini-title {
+    font-size: type.font-size-st(sc);
+    color: clrs.color-type(c3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 50%;
+        content: "";
+        background-color: clrs.color-theme(c2);
+        width: 2rem;
+        height: 0.2rem;
+    }
+
+    &::before {
+        left: -5rem;
+    }
+
+    &::after {
+        right: -5rem;
+    }
+}

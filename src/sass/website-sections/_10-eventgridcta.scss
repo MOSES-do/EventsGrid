@@ -1,0 +1,31 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.events__cta {
+  background-image: grad.gradient(gradient-primary),
+    url(../../assets/images/call-action/call-bg.jpg);
+
+  &-title {
+    display: flex;
+    border: 2px solid clrs.color-theme(c1);
+    border-radius: 30px;
+    padding: 1rem 3rem;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &-title,
+  &-sec-title__title,
+  &-sec-title__description {
+    color: clrs.color-type(c1);
+  }
+
+  .header__nav--cta {
+    margin-top: -2rem;
+  }
+}

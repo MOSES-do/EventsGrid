@@ -1,0 +1,83 @@
+@use "../general-styles/padding" as pad;
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.countdown {
+  background-color: clrs.color-theme("c1");
+  padding-bottom: 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
+    background-image: url(../../assets/images/countdown/bg.png);
+    background-color: clrs.color-theme("c3");
+    padding: 6rem;
+    border: 1rem solid rgba(clrs.color-type(c1), 0.3);
+    border-radius: 0.5rem;
+    transform: translateY(-50%);
+
+    position: relative;
+
+    & > * {
+      justify-self: center;
+    }
+
+    & div {
+      & div {
+        text-align: center;
+        font-size: type.font-size-st(xl);
+        font-weight: type.font-weight(bold);
+        color: clrs.color-type(c1);
+        position: relative;
+        z-index: 1;
+
+        & .separator::after {
+          position: absolute;
+          content: ":";
+          top: 25%;
+          left: 140%;
+        }
+
+        & .separator--1::after {
+          position: absolute;
+          content: ":";
+          top: 25%;
+          left: 145%;
+        }
+
+        & .separator--2::after {
+          position: absolute;
+          content: ":";
+          top: 25%;
+          left: 150%;
+        }
+
+        & p:nth-child(2) {
+          font-size: 1.5rem;
+          font-weight: type.font-weight(medium);
+        }
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+    }
+
+    &::before {
+      left: 0;
+      background-image: url("../../assets/images/countdown/left-shape.png");
+    }
+
+    &::after {
+      left: 0;
+      background-image: url("../../assets/images/countdown/right-shape.png");
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use "../general-styles/typography" as type;
+
+
+@media only screen and (max-width:1100px) {
+
+    //-------------------HEADER
+    .header__nav--links {
+        flex-basis: 100%;
+        order: 3;
+        margin-left: calc(4rem + 1vw);
+    }
+
+    .header__hero {
+        gap: 2rem;
+
+        &--title {
+            font-size: type.font-size-st(lc)
+        }
+    }
+}

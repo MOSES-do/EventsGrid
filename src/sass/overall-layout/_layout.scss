@@ -1,0 +1,11 @@
+// 12.5rem * 10 = 125px | 125 * 12 = 1500 is the container width
+//This container size represents the width of the website
+.container {
+    display: grid;
+    grid-template-columns: [container-start] repeat(12, minmax(min-content, 12.5rem));
+    justify-content: center;
+}
+
+.overall-layout {
+    grid-column: container-start/container-end;
+}

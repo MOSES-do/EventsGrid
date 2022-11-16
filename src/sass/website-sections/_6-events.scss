@@ -1,0 +1,181 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.events {
+    background-color: clrs.color-theme(c1);
+
+    &__days {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: .5rem;
+
+
+        &--day {
+            padding: pad.padding-st-v(lc) pad.padding-st-h(l);
+            text-align: center;
+
+            background-color: clrs.color-theme(c4);
+            border-radius: 0.5rem;
+            transition: all 0.25s ease-in-out;
+
+            //style should not be available in the child element with the "current" class
+            &:not(&.current) {
+                border-bottom: 4px solid transparent;
+                cursor: pointer;
+
+                &:hover {
+                    border-bottom: 4px solid clrs.color-theme(c2);
+                }
+
+
+                p:first-child {
+                    color: clrs.color-type(c3);
+
+                    @media (hover) {
+                        color: inherit;
+
+                        &:hover {
+                            color: clrs.color-type(c3);
+                        }
+                    }
+                }
+
+
+            }
+
+            &.current {
+                background-color: clrs.color-theme(c3);
+
+                P {
+                    color: clrs.color-type(c1);
+                }
+            }
+        }
+    }
+
+
+    &__timing {
+        background-color: clrs.color-theme(c4);
+        padding: pad.padding-st-v(lc) pad.padding-st-h(s);
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 5px;
+            top: 0;
+            left: 0;
+            background-color: clrs.color-theme(c2);
+        }
+
+        @media(hover) {
+            &::before {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.25s ease-in-out;
+            }
+
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+
+
+
+        &--calendar {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            &-date {
+                font-size: type.font-size-st(xl);
+                font-weight: type.font-weight(black-fw);
+            }
+
+            &-month {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__location--cta {
+        background-color: clrs.color-theme(c3);
+        align-self: center;
+    }
+
+    &__location {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+
+        .avatar {
+            width: 80px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        div:last-of-type {
+            p {
+                font-size: type.font-size-st(m);
+                color: clrs.color-type(c3);
+
+                @media (hover) {
+                    color: inherit;
+
+                    &:hover {
+                        color: clrs.color-type(c3);
+                    }
+                }
+
+            }
+
+            span {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                i {
+                    color: clrs.color-theme(c2);
+                }
+
+
+            }
+
+        }
+
+        &--user_avatar {
+            display: flex;
+            gap: 1rem;
+        }
+
+    }
+
+
+    &--cta {
+        background-color: clrs.color-theme(c2);
+        margin-top: 6rem;
+
+        &:hover {
+            background-color: clrs.color-theme(c3);
+        }
+    }
+}

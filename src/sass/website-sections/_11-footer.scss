@@ -1,0 +1,196 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+
+footer {
+
+    display: grid;
+    padding: pad.padding-d-v(m) pad.padding-d-h(m);
+    grid-template-columns: 1fr max-content max-content 1fr;
+    gap: 2rem;
+
+    margin-top: 8rem;
+
+    @media only screen and (max-width:990px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 8rem;
+        align-items: start;
+    }
+
+    @media only screen and (max-width:580px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .sect-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding-right: 3rem;
+
+        figure {
+            width: 70%;
+            justify-self: center;
+        }
+
+        p {
+            color: rgba(clrs.color-type(c2), 0.5);
+            font-weight: type.font-weight(medium);
+            font-size: type.font-size-st(sc)
+        }
+
+        &__footer__socials {
+            display: flex;
+            font-size: 1.5rem;
+            gap: 2rem;
+
+            i {
+                background-color: clrs.color-link(c4);
+                padding: pad.padding-st-v(s) pad.padding-st-h(s);
+                border-radius: 0.5rem;
+                color: clrs.color-theme(c1);
+
+                @media only screen and (max-width:600px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .sect-2 {
+        padding-right: 8rem;
+
+        &__sub-title {
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+        }
+
+        &__group-links {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+
+            a {
+                color: rgba(clrs.color-type(c2), 0.7);
+                font-weight: type.font-weight(medium);
+                font-size: 1.6rem;
+
+                @media(hover) {
+                    &:hover {
+                        color: clrs.color-theme(c2);
+                    }
+                }
+            }
+        }
+    }
+
+    .sect-3 {
+        padding-right: 3rem;
+
+        &__sub-title {
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+        }
+
+        &__group-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            a {
+                color: rgba(clrs.color-type(c2), 0.7);
+                font-weight: type.font-weight(medium);
+                font-size: 1.6rem;
+
+                @media(hover) {
+                    &:hover {
+                        color: clrs.color-theme(c2);
+                    }
+                }
+            }
+        }
+    }
+
+    .sect-4 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        &__sub-title {
+            font-size: 1.8rem;
+        }
+
+        input {
+            border: 1px solid rgba(#000, 0.4);
+            width: 100%;
+            padding: 1.5rem .8rem;
+        }
+
+        a {
+            background-color: clrs.color-theme(c2);
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.4rem;
+            color: clrs.color-type(c1);
+        }
+
+        @media only screen and (max-width:990px) {
+            grid-column: 2/2;
+            grid-row: 1;
+        }
+    }
+}
+
+
+@media only screen and (max-width:434px) {
+    footer {
+
+        .sect-2 {
+            &__sub-title {
+                padding-left: 2rem;
+            }
+        }
+
+        .sect-3 {
+            &__sub-title {
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:580px) {
+
+    .sect-1 {
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .sect-2,
+    .sect-3,
+    .sect-4 {
+        &__group-links {
+            padding-left: 2rem;
+            align-items: center;
+        }
+    }
+
+    .sect-2 {
+        p {
+            text-align: center;
+        }
+
+        padding-left: 4rem;
+    }
+}

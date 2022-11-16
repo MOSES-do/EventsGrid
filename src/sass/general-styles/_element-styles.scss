@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5; //line height*root/html font-size
+    position: relative;
+}
+
+
+a,
+input[type="submit"] {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+input,
+fieldset,
+textarea {
+    border: none;
+    background: none;
+    border-radius: 0.5rem;
+}

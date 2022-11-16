@@ -1,0 +1,123 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+.testimonials {
+    background: grad.gradient(gradient-primary);
+
+    margin-top: 12rem;
+
+    &__mini-title {
+        color: clrs.color-type(c1);
+
+        &::before,
+        &::after {
+            background-color: clrs.color-theme(c1);
+        }
+
+        &::before {
+            left: -2.5rem;
+        }
+
+        &::after {
+            right: -2.5rem;
+        }
+    }
+
+    &__title {
+        color: clrs.color-type(c1)
+    }
+
+    &__description {
+        color: clrs.color-type(c1);
+    }
+
+
+    &__box--card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, min-content);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: clrs.color-theme(c1);
+        padding: 2rem 2rem 0 2rem;
+        border-radius: 0.5rem;
+
+        .avatar {
+            grid-column: 1/ 1;
+            grid-row: 1;
+            height: 90px;
+            width: 90px;
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        &-para {
+            font-size: type.font-size-st(m);
+            font-weight: type.font-weight(bold);
+        }
+
+        &-sub-sec {
+            font-size: type.font-size-st(sc);
+            font-weight: type.font-weight(bold);
+            color: rgba(clrs.color-type(c2), 0.3);
+            margin-top: .7rem;
+        }
+
+        &-para,
+        &-sub-sec,
+        &-ratings {
+            grid-column: 2/ 7;
+            grid-row: 1/span 1;
+            justify-self: start;
+
+            @media only screen and (max-width:773px) {
+                margin-left: calc(-7rem + -.1vw);
+            }
+
+            @media only screen and (max-width:691px) {
+                margin-left: calc(-5rem + -.1vw);
+            }
+
+            @media only screen and (max-width:600px) {
+                margin-left: calc(-4rem + -2vw);
+            }
+
+            @media only screen and (max-width:531px) {
+                margin-left: calc(-1rem + -2vw);
+            }
+
+            @media only screen and (max-width:420px) {
+                margin-left: calc(-.1rem + -.1vw);
+            }
+        }
+
+        &-ratings {
+            margin-top: 4.5rem;
+
+            i {
+                color: clrs.color-theme(c3);
+            }
+        }
+
+        .testimonial__writeup {
+            grid-column: 1/7;
+            grid-row: 2/4;
+            text-align: left;
+            hyphens: auto;
+            margin-top: 2rem;
+        }
+    }
+
+    &__box.responsive-grid {
+        @media only screen and (max-width:600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

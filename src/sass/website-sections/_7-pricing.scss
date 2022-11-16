@@ -1,0 +1,200 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+@use "../general-styles/gradients" as grad;
+
+
+.pricing {
+    background: grad.gradient(gradient-primary);
+
+    &__mini-title {
+        color: clrs.color-type(c1);
+
+        &::before,
+        &::after {
+            background-color: clrs.color-theme(c1);
+        }
+
+        &::before {
+            left: -2.5rem;
+        }
+
+        &::after {
+            right: -2.5rem;
+        }
+    }
+
+    &__title {
+        color: clrs.color-type(c1)
+    }
+
+    &__description {
+        color: clrs.color-type(c1);
+    }
+
+    &__box {
+        width: 100%;
+        position: relative;
+
+        &--card {
+            background-color: clrs.color-theme(c1);
+            border-radius: 0.6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            transition: transform 0.25s ease-in-out;
+
+            &-title {
+                display: flex;
+                border: 2px solid clrs.color-theme(c3);
+                border-radius: 30px;
+                padding: 1rem 3rem;
+                color: clrs.color-type(c4);
+
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-para {
+                text-align: center;
+                margin-top: 1.8rem;
+            }
+
+            &-cost {
+                font-size: type.font-size-st(xl);
+                font-weight: type.font-weight(black-fw);
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            &-sticker {
+                background-color: clrs.color-theme(c3);
+                padding: pad.padding-st-v(s) pad.padding-st-h(l);
+                border-radius: 0.5rem;
+                position: relative;
+                margin-top: 2rem;
+                transition: all 0.25s linear;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: clrs.color-theme(c1);
+                    border-radius: 50%;
+                }
+
+                &::before {
+                    left: 0;
+                    transform: translate(-50%, 1%);
+                }
+
+                &::after {
+                    right: 0;
+                    transform: translate(50%, 1%);
+                }
+
+
+                p {
+                    color: clrs.color-type(c1);
+                    font-size: type.font-size-st(sc);
+                }
+
+                @media(hover) {
+                    &:hover {
+                        background-color: clrs.color-theme(c2);
+                    }
+                }
+            }
+
+            &-paras {
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 1rem;
+
+                p {
+                    font-weight: type.font-weight(light);
+                }
+            }
+
+
+            @media(hover) {
+                &:hover {
+                    transform: translateY(-.3rem);
+                }
+            }
+        }
+
+        .card--2 {
+            .pricing__box--card {
+                &-title {
+                    border: 2px solid clrs.color-theme(c2);
+                    color: clrs.color-type(c3);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.card--3 {
+    @media only screen and (max-width:1166px) {
+
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+    }
+}
+
+.card--1 {
+    @media only screen and (max-width:1166px) {
+        grid-column: 1/span 3;
+        grid-row: 2/span 1;
+        justify-self: center;
+        padding: 3rem 8rem;
+    }
+
+    @media only screen and (max-width:463px) {
+        padding: 3rem 2rem;
+    }
+}
+
+@media only screen and (max-width:773px) {
+
+    .pricing__box {
+        display: flex;
+        flex-direction: column;
+
+        padding: pad.padding-d-v(m) pad.padding-st-h(xl);
+    }
+}
+
+
+@media only screen and (max-width:530px) {
+    .pricing__box {
+        padding: calc(4rem + 1vh) calc(3rem + 4vw);
+    }
+}
+
+
+
+@media only screen and (max-width:400px) {
+    .pricing__box {
+        padding: calc(1rem + 1vh) calc(.2rem + .6vw);
+    }
+}

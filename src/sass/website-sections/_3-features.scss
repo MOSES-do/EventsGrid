@@ -1,0 +1,121 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.features {
+  background-color: clrs.color-theme(c1);
+  padding-top: 0;
+
+  &__mini-title {
+    &::before {
+      left: -2.5rem;
+    }
+
+    &::after {
+      right: -2.5rem;
+    }
+  }
+
+  &__container {
+    width: 100%;
+
+    i,
+    &--feature__number {
+      font-size: type.font-size-st(l);
+      width: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    i {
+      background-color: clrs.color-theme(c3);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: clrs.color-type(c1);
+    }
+
+    &--feature {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: min-content;
+      column-gap: 4rem;
+      row-gap: 2rem;
+      padding: 3rem;
+      background-color: rgba(clrs.color-theme(c4), 0.4);
+      border-radius: 0.5rem;
+
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        height: 7rem;
+        width: 1.9rem;
+      }
+
+      &::before {
+        background-image: url(../../assets/images/features/dots-blue.svg);
+        top: 0;
+        left: 0;
+        transition: all 200ms ease-in;
+      }
+
+      &::after {
+        background-image: url(../../assets/images/features/dots-pink.svg);
+        bottom: 0;
+        right: 0;
+        transition: all 200ms ease-in;
+      }
+
+      @media (hover) {
+        &::before {
+          left: -1rem;
+          transform: scaleX(0);
+        }
+
+        &::after {
+          right: -1rem;
+          transform: scaleX(0);
+        }
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          left: 0;
+        }
+
+        &:after {
+          transform: scaleX(1);
+          right: 0;
+        }
+      }
+
+      &__icon {
+        grid-column: 1/2;
+        grid-row: 1/1;
+      }
+
+      &__number {
+        grid-column: 2/3;
+        grid-row: 1/1;
+        justify-self: end;
+        color: rgba(#777, 0.1);
+        font-size: type.font-size-st(xl);
+      }
+
+      &__desc {
+        grid-column: 1/-1;
+        grid-row: 3/3;
+      }
+
+      &__title {
+        grid-column: 1/3;
+        grid-row: 2/2;
+        font-size: type.font-size-st(m);
+      }
+    }
+  }
+}

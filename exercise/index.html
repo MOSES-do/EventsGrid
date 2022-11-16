@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pholux Website</title>
+</head>
+
+<body>
+    <section>
+        <main class="container">
+            <figure>
+                <img src="../img/about-1.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/about-2.jpg" alt="">
+            </figure>
+            <figure><img src="../img/about-3.jpg" alt=""></figure>
+            <div class="container-div">
+                <h1>Let's Play</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto corporis at qui autem tempora quasi,
+                    aperiam incidunt inventore repellat pariatur.</p>
+            </div>
+        </main>
+
+
+    </section>
+    </div>
+
+
+    <style>
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .container::before,
+        .container::after {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+        }
+
+        .container::after {
+            top: -25rem;
+            left: -30rem;
+            height: 90rem;
+            width: 88rem;
+            z-index: -1;
+
+            background-image: linear-gradient(120deg, hsla(162 81% 42% /0.9), hsla(163 29% 65% /0.9));
+        }
+
+        .container::before {
+            top: -10rem;
+            right: -10rem;
+            height: 20rem;
+            width: 20rem;
+
+            background-image: linear-gradient(120deg, hsla(162 81% 42% /0.9), hsla(163 29% 65% /0.9));
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 27rem) 1fr;
+            grid-template-rows: repeat(2, 28rem);
+            margin: 0 auto;
+            padding: 3rem;
+            column-gap: 4rem;
+            row-gap: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+            object-position: center top;
+            border: 2px solid hsla(162, 81%, 42%);
+        }
+
+        figure:nth-of-type(2) {
+            grid-column: 1/ span 1;
+            grid-row: 2/span 1;
+        }
+
+        figure:last-of-type {
+            grid-column: 2/ span 1;
+            grid-row: 1/ span 3;
+            place-self: center;
+
+        }
+
+        .container figure:last-of-type img {
+            width: auto;
+            height: auto;
+        }
+
+        .container-div {
+            grid-column: 3/ span 4;
+            grid-row: 1/ span 3;
+            place-self: center;
+            padding: 0 4rem;
+        }
+    </style>
+
+
+    <h1 style="text-align:center">RESPONSIVE CHECKOUT FORM</h1>
+    <div class="exer-flex-1 ">
+        <div class="left-ch">
+            <h1 class="main-title padding-bt-sm">Checkout</h1>
+
+            <small class="cart-info padding-bt-sm">There are 3 products in your cart</small>
+
+            <h2 class="billing padding-bt-sm">Billing Details</h2>
+
+            <form class="form-grid">
+                <input type="text" class="fname" name="fname" placeholder="First Name*">
+                <input type="text" class="lname" name="lname" placeholder="Last Name*">
+                <input type="text" class="address" placeholder="address*">
+                <input type="text" class="address-2" placeholder="address Line 2*">
+                <select class="drop-down" id="country" name="Country">
+                    <option value="---">Country</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="mali">Mali</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="togo">Togo</option>
+                </select>
+                <input type="text" class="city" placeholder="City/Town">
+
+                <input type="text" class="zip" placeholder="Passcode/Zip">
+
+                <input type="text" class="number" placeholder="Phone*">
+
+                <textarea name="message" class="textarea" rows="10" cols="30"
+                    placeholder="Additional Information"></textarea>
+
+                <span class="account">
+                    <input type="checkbox" id="account" name="account">
+                    <span>Create Account</span>
+                </span>
+
+                <span class="checkbox">
+                    <input type="checkbox">
+                    <span>Ship to a different address</span>
+                </span>
+
+                <h5 class="apply">Apply coupon to get discount</h5>
+
+                <span class="submit">
+                    <span><input type="text" class="coupon" placeholder="Coupon code"></span>
+                    <button class="btn">Apply Code</button>
+                </span>
+            </form>
+        </div>
+
+        <div class="right-ch">
+
+            <h1 class="main-title padding-bt-sm">Your Order</h1>
+
+
+            <div class="product-total">
+                <p class="auto-right">Product</p>
+                <p class="product-subtotal">Subtotal</p>
+            </div>
+            <!--  -->
+            <div class="checkout-product-desc">
+                <div class="deals bt-line">
+                    <figure class="avatar">
+                        <img class='img-1' src="../images/1.1.jpg" alt="product-image">
+                    </figure>
+
+                    <div class="product-desc mr-auto">
+                        <div>
+                            <p>Men's T-shirt</p>
+                        </div>
+                        <div class="options">
+                            <small>White</small>
+                            <small>XL</small>
+                            <small>1x36.00</small>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <p class="bold-600">$36.00</p>
+                    </div>
+                </div>
+
+                <div class="deals bt-line">
+                    <figure class="avatar">
+                        <img class='img-1' src="../images/1.2.jpg" alt="product-image">
+                    </figure>
+
+                    <div class="product-desc mr-auto">
+                        <div>
+                            <p>Men's T-shirt</p>
+                        </div>
+                        <div class="options">
+                            <small>White</small>
+                            <small>XL</small>
+                            <small>1x36.00</small>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <p class="bold-600">$36.00</p>
+                    </div>
+                </div>
+
+                <div class="deals bt-line">
+                    <figure class="avatar">
+                        <img class='img-1' src="../images/1.3.jpg" alt="product-image">
+                    </figure>
+
+                    <div class="product-desc mr-auto">
+                        <div>
+                            <p>Men's T-shirt</p>
+                        </div>
+                        <div class="options">
+                            <small>White</small>
+                            <small>XL</small>
+                            <small>1x36.00</small>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <p class="bold-600">$36.00</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="sub-total">
+                    <div class="bt-line">
+                        <div class="sub-sect">
+                            <p class="mr-auto">Subtotal</p>
+                            <p class="bold-600">$1000.00</p>
+                        </div>
+                        <div class="sub-sect">
+                            <p class="mr-auto">Shopping Cart [+]</p>
+                            <p class="bold-600">$800.00</p>
+                        </div>
+                        <div class="sub-sect">
+                            <p class="mr-auto">Discount [-]</p>
+                            <p class="bold-600">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="sub-sect total-p">
+                        <p class="mr-auto">Total Payable</p>
+                        <p class="bold-600">$1790.00</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="payment">
+                <h1 class="padding-bt-sm"> Payment</h1>
+
+                <div class="payment--checkout">
+                    <span><input type="radio"></span>
+                    <span>Direct bank transfer</span>
+                </div>
+
+                <div class="payment--checkout">
+                    <span><input type="radio"></span>
+                    <span>Cash on delivery</span>
+                </div>
+
+                <div class="payment--checkout">
+                    <span><input type="radio"></span>
+                    <span>Online Gateway</span>
+                </div>
+            </div>
+            <button class="btn btn-payment">Place Order</button>
+
+        </div>
+    </div>
+    <style>
+        /* GENERAL */
+        html {
+            font-size: 62.5%;
+        }
+
+        .exer-flex-1 {
+            display: flex;
+            font-size: 1.4rem;
+            overflow-x: hidden;
+            padding: 10rem 10rem 10rem 10rem;
+            max-width: 140rem;
+            gap: 5rem;
+        }
+
+
+
+        .left-ch {
+            align-self: flex-start;
+            flex-basis: 55%;
+        }
+
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .cart-info {
+            font-size: 1.3rem;
+            display: block;
+        }
+
+        .billing {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .padding-bt-sm {
+            padding-bottom: 2rem;
+        }
+
+        /*  FORM */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(9, min-content);
+            gap: 2rem;
+        }
+
+
+        .fname {
+            grid-column: 1/ 3;
+            grid-row: 1/1;
+        }
+
+        .lname {
+            grid-column: 3/ 5;
+            grid-row: 1/1;
+        }
+
+
+        .address {
+            grid-column: 1/ 3;
+            grid-row: 2/2;
+        }
+
+        .address-2 {
+            grid-column: 3/ 5;
+            grid-row: 2/2;
+        }
+
+        .drop-down {
+            grid-column: 1/ 2;
+            grid-row: 3/3;
+        }
+
+        .city {
+            grid-column: 2/ 5;
+            grid-row: 3/3;
+        }
+
+        .zip {
+            grid-column: 1/ 3;
+            grid-row: 4/4;
+        }
+
+        .number {
+            grid-column: 3/ 5;
+            grid-row: 4/4;
+        }
+
+        .textarea {
+            grid-column: 1/ 5;
+            grid-row: 5/5;
+            outline: none;
+        }
+
+        .account {
+            grid-column: 1/ 5;
+            grid-row: 6/6;
+
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+
+        .account input {
+            margin-top: -.6px;
+        }
+
+        .checkbox {
+            grid-column: 1/ 5;
+            grid-row: 7/7;
+
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+
+        .checkbox input {
+            margin-top: -.6px;
+        }
+
+        .apply {
+            grid-column: 1/ 5;
+            grid-row: 8/8;
+
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+
+        .submit {
+            grid-column: 1/ 5;
+            grid-row: 9/9;
+
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+
+        input[type=text],
+        input[type=number] {
+            padding: 1.1rem;
+        }
+
+        input {
+            outline: none;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+
+        input::placeholder {
+            font-size: 1.5rem;
+        }
+
+        .btn {
+            outline: none;
+            color: white;
+            background-color: rgb(63, 60, 60);
+            border-radius: 4px;
+            border: none;
+            padding: 1.2rem;
+            cursor: pointer;
+            transition: all 400ms ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* right */
+        .avatar img {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+
+            object-fit: cover;
+        }
+
+        .right-ch {
+            flex-basis: 35%;
+        }
+
+
+        .product-total {
+            display: flex;
+            align-items: left;
+            background-color: rgba(236, 232, 232, 0.5);
+            padding: 2rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 4rem;
+        }
+
+        .auto-right {
+            margin-right: auto;
+            align-self: left;
+        }
+
+        .deals {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            padding: 2rem;
+        }
+
+
+        .options {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .options small {
+            color: #888;
+        }
+
+        .checkout-product-desc {
+            border: 1.4px solid rgba(236, 232, 232, 0.5);
+            margin-top: -4rem;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .product-desc p {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* total */
+        .sub-total {
+            margin-top: 4rem;
+            border-radius: 7px;
+        }
+
+        .mr-auto {
+            margin-right: auto;
+        }
+
+        .sub-sect {
+            display: flex;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        .total-p {
+            margin-top: 5rem;
+            font-weight: 600;
+        }
+
+
+
+        /* PAYMENT */
+        .payment {
+            margin-top: 3rem;
+            border: 1px solid rgba(236, 232, 232, 0.5);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .payment h1 {
+            padding: 2rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 4rem;
+            background-color: rgba(236, 232, 232, 0.5);
+
+        }
+
+        .payment--checkout {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 0 2rem;
+        }
+
+        .payment--checkout span input {
+            margin-top: .1rem;
+        }
+
+        .btn-payment {
+            width: 100%;
+            background-color: rgb(0, 174, 255);
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+
+        /* UTITLITY */
+
+        .bt-line {
+            position: relative;
+        }
+
+        .bt-line::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: rgba(236, 232, 232, 0.5);
+            bottom: -1rem;
+            left: 0;
+        }
+
+        .bold-600 {
+            font-weight: 600;
+        }
+    </style>
+</body>
+
+</html>
