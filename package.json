@@ -18,9 +18,9 @@
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:html build:*",
-    "compile:sass": "sass src/sass/index.scss public/css/index.css",
-    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "build:css": "npm-run-all compile:sass"
+    // "compile:sass": "sass src/sass/index.scss public/css/index.css",
+    "postbuild:css": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "postbuild": "npm-run-all postbuild:css"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
