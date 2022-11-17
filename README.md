@@ -1,3 +1,3 @@
 # EventsGrid
 Boot camp project  - Building an events website
-url: eventsgrid.netlify.app
+url: https://eventsgrid.netlify.app
